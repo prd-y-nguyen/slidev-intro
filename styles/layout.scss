@@ -1,0 +1,41 @@
+/*
+  sli.dev has windicss built-in for css scaffolding
+  Write your css faster and shorter using windicss
+  See docs: https://windicss.org/guide
+
+  You still can use normal css for the slide
+ */
+
+/* For all slides */
+.slidev-layout {
+  border-top: 12px solid var(--slidev-theme-primary);
+
+  /* Setup background */
+  @apply bg-no-repeat bg-auto bg-right-top;
+  background-image: url(../assets/img/logo.png);
+}
+
+/* For the first slide, override the all-slide's background setup */
+.slidev-layout.cover {
+  /* Setup background */
+  @apply bg-no-repeat bg-auto bg-top;
+  background-image: url(../assets/img/logo-light.png);
+  background-color: var(--slidev-theme-primary);
+
+  @apply h-full grid relative;
+
+  h1 {
+    @apply text-6xl text-center font-bold text-white leading-20 max-w-11/12 mx-auto;
+  }
+
+  h2 {
+    @apply text-2xl text-center text-white max-w-3/5 mx-auto;
+  }
+
+  .presenter {
+    @apply absolute bottom-5 left-1/2 transform -translate-x-1/2 text-lg text-center text-white;
+  }
+}
+
+/* For the last slide */
+.slidev-layout.end {}

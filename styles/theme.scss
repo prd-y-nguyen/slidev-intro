@@ -1,0 +1,25 @@
+:root {
+  /* default theme color */
+  /* can be overrided by uses `themeConfig` option */
+  --slidev-theme-primary: #25C9D0;
+}
+
+html:not(.dark) {
+  /* light mode css here */
+}
+
+html.dark {
+  /* dark mode css here */
+
+  /* For all slides */
+  .slidev-layout {
+    border-top: 12px solid white;
+    background-image: url(../assets/img/logo-light.png);
+  }
+
+
+  /* For the first slide, override the all-slide's background setup */
+  .slidev-layout.cover {
+    background-color: initial;
+  }
+}
